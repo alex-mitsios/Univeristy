@@ -1,1 +1,1 @@
-# Univeristy
+# University - Thesis
