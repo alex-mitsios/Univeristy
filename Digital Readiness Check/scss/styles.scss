@@ -1,0 +1,111 @@
+//Imports
+@import "./variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "./shadows";
+
+//Tweaking
+
+// FIRST TAB AND BODY START
+body {
+    background: $bg-color;
+    height: 100vh;
+}
+
+//take the test button hover
+.btn.btn-lg:hover{      
+  color: $container-bg;
+}
+
+//main container background
+.content-container {    
+  background: $container-bg;
+}
+
+//tick symbols
+.fas.fa-check {     
+  color: $teal;   
+  font-size: 20px;
+  margin-left: 0.25em;
+}
+//FIRST TAB END
+
+
+//SECOND TAB START
+
+//competence and description container
+.comp-desc-container {              
+  background:	$comp-desc-bg;   
+  color: $gray-600;
+  border-radius: 1em;
+  height: 12em;
+  width: 75%;
+  .comp-container {
+    height: 4.5em;
+  }
+  .desc-container {
+    height: 7em;
+    .description {
+      width: 75%;
+    }
+  }
+}
+
+
+//CUSTOMIZING FORM 
+#question-form {
+  height: 5em;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+@for $i from 1 through 8 {
+  .option-#{$i} {
+    color: map-get($form-option-colors, $i);
+  }
+}
+
+.option-media {
+  padding: 0.5em 1em;
+  font-size: 2em;
+  transition: transform 0.4s;
+}
+
+.option-media:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+//END OF FORM CUSTOMIZATION
+//SECOND TAB END
+
+
+//THIRD TAB
+.progress-ring-circle {
+  stroke: $teal;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 2.5s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.circular-ring{
+  position: relative;
+  height: 100%;
+  width: auto;
+  &::after {
+    content: attr(data-value);
+    font-size: 4em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $gray-700;
+  }
+}
+
+.svg-shadow {
+  filter: drop-shadow(0 0 4px $teal);
+}
+
+//IMPORT MEDIA QUERIES LAST
+@import "./media-queries"; 

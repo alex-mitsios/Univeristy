@@ -1,0 +1,137 @@
+//FOR FIRST TAB
+@media screen and (max-width: 576px) {
+    .container {
+      .first-seg {
+        border-bottom: 1px solid lightgray;
+      }
+      .second-seg {
+        border-bottom: 1px solid lightgray;
+      }
+      .title-description {
+        display: none;
+      }
+      .title {
+      border-bottom: 1px solid lightgray;
+      }
+    }
+  
+    h4 .d-inline-block {
+      margin-top: 0.25em;
+    }
+  }
+
+
+//FOR SECOND TAB
+
+@media screen and (max-width: 1200px) and (min-width: 993px){
+  .comp-desc-container{
+    height: 14em;
+    width: 75%;
+    .desc-container .description {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 776px) {
+  .comp-desc-container {
+    height: 16em;
+    width: 100%;
+    .comp-container {
+      height: 6em;
+    }
+    .desc-container {
+      height: 9em;
+      .description {
+        width: 100%;
+      }
+    }
+  }
+  .option-media{
+    padding: 0.5em 0.65em;
+  }
+}
+
+@media screen and (max-width: 775px) and (min-width: 768px){
+  .comp-desc-container {
+    height: 15em;
+    width: 100%;
+    .comp-container {
+      height: 6em;
+    }
+    .desc-container {
+      height: 8em;
+      .description {
+        width: 100%;
+      }
+    }
+  }
+  .option-media {
+    padding: 0.5em 0.65em;
+  } 
+}
+
+@media screen and (max-width: 767px) and (min-width: 576px){
+  .comp-desc-container{
+    height: 17em;
+    width: 100%;
+    .comp-container {
+      height: 6em;
+    }
+    .desc-container {
+      height: 10em; 
+      .description {
+        width: 100%;
+      }
+    }
+  }
+  .option-media {
+    padding: 0.5em 0.35em;
+  }
+}
+
+@media screen and (max-width: 575px) and (min-width: 471px) {
+  .comp-desc-container{
+    height: 21em;
+    width: 100%;
+    .comp-container {
+      height: 7.2em;
+    }
+    .desc-container {
+      height: 13em; 
+      .description {
+        width: 100%;
+      }
+    }
+  }
+  .option-media {
+    padding: 0.5em 0.25em;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .comp-desc-container{
+    height: 21em;
+    width: 100%;
+    .comp-container {
+      height: 7.2em;
+    }
+    .desc-container {
+      height: 13em; 
+      .description {
+        width: 100%;
+      }
+    }
+  }
+  .option-media {
+    padding: 0.5em 0.2em;
+  }
+}
+
+//THIRD TAB
+@media screen and (max-width: 768px) {
+  .circular-ring::after {
+    font-size: 3em;
+  }
+}
+
