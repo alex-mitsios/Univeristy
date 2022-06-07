@@ -125,14 +125,14 @@ function displayNext() {
 }
 
 function handleOption(evt) {
-    console.log(evt.target.nodeName);
+    //console.log(evt.target.nodeName);
     if (optionCounter < data.questions.length - 1) {
         if (evt.target.nodeName === "INPUT") {
             optName = evt.target.name;
             scores.push(scoreValues[parseInt(optName)]);
             optionCounter++;
             updateProgressBar(); 
-            console.log(scores);                  
+            // console.log(scores);                  
         }
     } else {
         if (evt.target.nodeName === "INPUT") {
