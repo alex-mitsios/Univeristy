@@ -37,7 +37,7 @@ let optionCounter = 0; //Used in handleOption, displayNext and initialize functi
 const scoreValues = [15, 25, 40, 50, 65, 75, 90, 100];
 const scores = []; //Holds the scores gathered from all options.
 let optName;  //Used in handleOption function.
-let progressNumber = 0; //for progress bar later :)
+let progressNumber = 0; //for bootstrap progress bar 
 
 class Dimension {
     constructor(score, divideBy, lb, ub){
@@ -92,7 +92,7 @@ function reset() {
         firstTab.classList.remove("d-none");
         startBtn.classList.remove("d-none");
         spinner3.classList.add("d-none");
-    }, 555)
+    }, 500);
 }
 
 function initialize() {
@@ -105,10 +105,10 @@ function initialize() {
         firstTab.classList.add("d-none");
         secondTab.classList.remove("d-none");
         secondTabPart2.classList.remove("d-none");
-        shadowBox.classList.remove('shadow-6'); //remove last shadow(hardcoded)
+        shadowBox.classList.remove('shadow-6'); //remove last shadow
         shadowBox.classList.add(`shadow-${data.questions[optionCounter].shadow}`);
         progBarStat.textContent = `Progress Bar: ${optionCounter + 1}/36`;
-    }, 555); //set to 555 ;)
+    }, 500); 
     displayNext();
 }
 
@@ -174,7 +174,7 @@ function getResults() {
         createProgressBars();
          setTimeout(() => {
             setSVGProgress(dimensions[7].score);
-         }, 555)
+         }, 500)
     } else {
         alert("SCORES ARRAY IS NOT FULL!!");
         location.reload();  //check this
@@ -182,7 +182,8 @@ function getResults() {
 }
 
 function updateProgressBar() {
-    progressNumber+= 2.7777777777777777777777777777778;  //comes from 100/36 divided by 2 because of label click event counts as 2 times 100/36
+    //comes from 100/36 divided by 2 because of label click event counts as 2 times 100/36
+    progressNumber+= 2.7777777777777777777777777777778;  
     progressBar.style.width = `${progressNumber}%`;
     if (progressBar.style.width === "100%") {
         progressBar.textContent= "COMPLETE!!";
@@ -190,7 +191,7 @@ function updateProgressBar() {
     progBarStat.textContent = `Progress Bar: ${optionCounter + 1}/36`;
 }
 
-//.shadow is from json file
+//.shadow is an id from the json file used to set the correct shadow color for every dimension on the test
 function setBoxShadow() {
     shadowBox.classList.add(`shadow-${data.questions[optionCounter].shadow}`);  
     shadowBox.classList.remove(`shadow-${(data.questions[optionCounter].shadow) - 1}`)
