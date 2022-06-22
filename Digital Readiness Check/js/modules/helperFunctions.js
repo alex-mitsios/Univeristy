@@ -28,7 +28,7 @@ const scoreValues = [15, 25, 40, 50, 65, 75, 90, 100];
 const scores = []; //Holds the scores gathered from all options
 const boundsDiffArray = []; //holds the bound diff for each dimension
 let boundsArray = []; //holds the upper and lower bounds of each dimension
-const dimensions = []; //holds the dimensions object instances
+let dimensions = []; //holds the dimensions object instances
 let optName;  //Used in handleOption function.
 let progressNumber = 0; //for bootstrap progress bar 
 const TOTAL_QUESTIONS = data.questions.length;
@@ -162,7 +162,7 @@ function updateProgressBar() {
 //.shadow is an id from the json file used to set the correct shadow color for every dimension on the test
 function setBoxShadow() {
     shadowBox.classList.add(`shadow-${data.questions[optionCounter].shadow}`);  
-    shadowBox.classList.remove(`shadow-${(data.questions[optionCounter].shadow) - 1}`)
+    shadowBox.classList.remove(`shadow-${(data.questions[optionCounter].shadow) - 1}`);
 }
 
 
@@ -223,7 +223,7 @@ function initiateDimensions() {
     makeBoundsDiffArray();
     makeBoundsArray();
     for (let i = 0; i < TOTAL_DIMENSIONS; i++) {
-        dimensions.push(new Dimension(boundsArray[i].lowerBound, boundsArray[i].upperBound));
+        dimensions = [...dimensions, new Dimension(boundsArray[i].lowerBound, boundsArray[i].upperBound)];
     }
 
     // console.log(boundsDiffArray,boundsArray,dimensions);
