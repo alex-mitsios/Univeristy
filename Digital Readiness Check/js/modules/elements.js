@@ -1,9 +1,10 @@
 //Fetch Json File
+const projectPath = window.location.pathname;
 
 async function getJSON() {
-    return fetch('/storage/questions.json').then(res => res.json())
+    return fetch(`${projectPath}/storage/questions.json`).then(res => res.json())
         .catch(err => alert('Questions Fetch Error', err));
-  }
+}
    
 export const data  = await getJSON();
 export const area = document.getElementById("area");
